@@ -63,7 +63,7 @@ img {
   position: relative;
   display: inline-block; 
   margin-right: 30px; 
-  border-bottom: 2px solid black; 
+  border-bottom: 2px solid transparent;
   padding-bottom: 5px;
 }
 .index li::before {
