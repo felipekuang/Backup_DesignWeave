@@ -2,6 +2,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const animatedElement = document.getElementById("animatedElement");
     animatedElement.classList.add("show");
 });
+
+function smoothScroll(event) {
+    event.preventDefault();
+    
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    const offset = targetElement.getBoundingClientRect().top;
+    
+    window.scrollTo({
+        top: offset + window.scrollY,
+        behavior: "smooth"
+    });
+}
 // function scrollToPage(pageId) {
 //     var page = document.getElementById(pageId);
 //     page.scrollIntoView({
